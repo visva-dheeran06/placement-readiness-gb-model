@@ -1,8 +1,6 @@
 # placement-readiness-gb-model
 PlacementIQ — AI-powered system that predicts placement readiness using a Gradient Boosting model and delivers personalized insights via an interactive dashboard.
 
-PlacementIQ — Placement Readiness Predictor
-
 PlacementIQ is a machine learning-based system that predicts how ready a student is for placements. It uses a trained Gradient Boosting model to evaluate key academic and skill-based inputs and presents the result through a simple, interactive web interface.
 
 The goal of this project is to move beyond assumptions and provide a data-driven view of placement preparedness.
