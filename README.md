@@ -1,57 +1,58 @@
-# placement-readiness-gb-model
-PlacementIQ — AI-powered system that predicts placement readiness using a Gradient Boosting model and delivers personalized insights via an interactive dashboard.
+# PlacementIQ
 
-PlacementIQ is a machine learning-based system that predicts how ready a student is for placements. It uses a trained Gradient Boosting model to evaluate key academic and skill-based inputs and presents the result through a simple, interactive web interface.
+PlacementIQ is a machine learning-based system that estimates student placement readiness using a Gradient Boosting Regressor.
 
-The goal of this project is to move beyond assumptions and provide a data-driven view of placement preparedness.
+The system evaluates five career-related inputs — CGPA, DSA performance, communication skills, internship experience, and number of projects — and converts them into a readiness score through a trained machine learning pipeline.
 
-Overview
+The result is presented through an interactive web interface with visual insights and personalized improvement suggestions.
 
-This system takes five inputs from a user:
+🔗 **Live Demo:** https://visva-dheeran06.github.io/placement-readiness-gb-model/
 
-1.CGPA
-2.DSA performance
-3.Communication skills
-4.Internship experience
-5.Number of projects
 
-These inputs are scaled and passed into a trained Gradient Boosting model. The model generates a readiness score, which is then visualized through charts and structured feedback.
+## Overview
 
-Model Details
-Algorithm: Gradient Boosting Regressor
-Number of trees: 200
-Learning rate: 0.05
-Accuracy: R² ≈ 0.97
+PlacementIQ is designed to help students understand their current level of placement preparedness through a data-driven readiness assessment.
 
-Feature importance observed during training:
+Instead of relying only on assumptions, the system evaluates multiple academic and skill-related factors and generates an estimated readiness score.
 
-DSA Score: 62%
-CGPA: 17%
-Internship Experience: 14%
-Projects: 4.5%
-Communication Skills: 2.6%
+The current system focuses on five inputs:
 
-The model indicates that problem-solving ability (DSA) has the highest impact on placement readiness.
+1. **CGPA**
+2. **DSA Performance**
+3. **Communication Skills**
+4. **Internship Experience**
+5. **Number of Projects**
 
-How It Works
-The user provides input through the web interface.
-Data is normalized using MinMaxScaler.
-The trained model processes the input.
-A readiness score is generated.
-The result is displayed along with visual insights and suggestions.
-Project Structure
+These inputs are preprocessed and passed through a trained Gradient Boosting model. The resulting score is presented through an interactive web interface along with visual insights and personalized suggestions.
 
-PlacementIQ
 
-frontend → HTML, CSS, JavaScript files
-model → trained model and scaler (.pkl files)
-notebook → Jupyter notebook used for training
-results → generated plots and visual outputs
-Technologies Used
-Frontend: HTML, CSS, JavaScript
-Visualization: Chart.js
-Machine Learning: Python, scikit-learn
+## Key Features
 
-Purpose
+- Placement readiness estimation using Gradient Boosting
+- Five-factor student assessment
+- Data preprocessing and feature scaling
+- Interactive web interface
+- Visual representation of prediction results
+- Personalized improvement suggestions
+- Feature importance analysis
+- Trained machine learning model and preprocessing pipeline
 
-This project is designed to help students understand where they stand in terms of placement readiness and identify areas that need improvement. It provides a structured, data-backed perspective instead of relying on guesswork.
+
+## How It Works
+
+The system follows the following pipeline:
+
+```text
+User Input
+    ↓
+Data Preprocessing
+    ↓
+MinMaxScaler
+    ↓
+Gradient Boosting Regressor
+    ↓
+Readiness Score
+    ↓
+Visual Insights
+    ↓
+Personalized Suggestions
